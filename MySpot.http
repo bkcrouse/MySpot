@@ -1,0 +1,64 @@
+@url = http://localhost:5000
+
+###
+GET {{url}}/reservations/
+
+
+# GETS
+
+#  [FromQuery] Example
+###
+GET {{url}}/reservations?id=1
+
+# [FromRoute] Example
+###
+GET {{url}}/reservations/1
+
+# [FromRoute] Example
+###
+GET {{url}}/reservations/2
+
+
+
+# POSTS
+
+###
+POST {{url}}/reservations/
+
+
+###
+POST {{url}}/reservations/
+Content-Type: application/json
+
+{
+    "parkingSpotName": "P1",
+    "employeeName": "Joe Doe",
+    "licensePlate" : "XYZ"
+}
+
+###
+POST {{url}}/reservations/
+Content-Type: application/json
+
+{
+    "parkingSpotName": "P2",
+    "employeeName": "Joe Doe",
+    "licensePlate" : "XYZ"
+}
+
+###
+POST {{url}}/reservations/
+Content-Type: application/json
+
+{
+    "parkingSpotName": "P7",
+    "employeName": "Joe Doe",
+    "licensePlate" : "XYZ"
+}
+
+
+###
+DELETE {{url}}/reservations/
+
+###
+PUT {{url}}/reservations/
